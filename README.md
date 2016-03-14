@@ -25,3 +25,13 @@ Since Google authentication is (globally) authenticating a user's email address,
 #### Details for item 2
 
 The other functional change is that the default value for option `sonar.auth.google.allowUsersToSignUp` is `false`. If you want anyone with a Google account to be able to automatically create an account on your Sonarqube system you should set this to `true`. Note that with the default setting, you must explicitly create a user account in Sonarqube with the `Login` value set to the email address used for Google authentication. When creating an account you must also set the `Name` of the user and create a password. If you only want this user to be able to authenticate with Google, create a highly complex random password and don't record it anywhere. Also note that when logging in with Google, the `Name` field will be updated with the name provided by Google authentication each time the user is authenticated. If the user updates their name in their Google account, this change will be reflected in Sonar.
+
+## OAuth Configuration
+
+When configuring the Sonarqube plugin you must supply the OAuth client ID and client secret using options `sonar.auth.google.clientId` and `sonar.auth.google.clientSecret`.
+
+Basic instructions for setting up OAuth support for Google can be found [here](https://support.google.com/cloud/answer/6158849?hl=en&ref_topic=6262490).
+
+*Note* that if you have a Google Apps for Work account it is possible to restrict authentication of users to only those who belong to your domain(s). This is not done be default however, so by default any Google account holder can be authenticated.
+
+Restricting authentication only to members of your Google Apps for Work domain(s) would allow the `sonar.auth.google.allowUsersToSignUp` option to be more safely enabled.

@@ -1,6 +1,8 @@
 # sonar-auth-google
 External authentication provider for Sonarqube using Google OAuth2 / OpenID Connect
 
+[![Build Status](https://travis-ci.org/steven-turner/sonar-auth-google.svg?branch=master)](https://travis-ci.org/steven-turner/sonar-auth-google)
+
 This project is a port of the existing project [sonar-auth-github](https://github.com/SonarSource/sonar-auth-github).
 
 It maintains the same project structure, and I attempted to make only those changes necessary.

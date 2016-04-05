@@ -52,8 +52,8 @@ public class GoogleIdentityProviderTest {
 
   @Test
   public void is_enabled() throws Exception {
-    settings.setProperty("sonar.auth.google.clientId", "id");
-    settings.setProperty("sonar.auth.google.clientSecret", "secret");
+    settings.setProperty("sonar.auth.google.clientId.secured", "id");
+    settings.setProperty("sonar.auth.google.clientSecret.secured", "secret");
     settings.setProperty("sonar.auth.google.loginStrategy", LOGIN_STRATEGY_DEFAULT_VALUE);
     settings.setProperty("sonar.auth.google.enabled", true);
     assertThat(underTest.isEnabled()).isTrue();
@@ -86,8 +86,8 @@ public class GoogleIdentityProviderTest {
 
   private void setSettings(boolean enabled) {
     if (enabled) {
-      settings.setProperty("sonar.auth.google.clientId", "id");
-      settings.setProperty("sonar.auth.google.clientSecret", "secret");
+      settings.setProperty("sonar.auth.google.clientId.secured", "id");
+      settings.setProperty("sonar.auth.google.clientSecret.secured", "secret");
       settings.setProperty("sonar.auth.google.loginStrategy", LOGIN_STRATEGY_DEFAULT_VALUE);
       settings.setProperty("sonar.auth.google.enabled", true);
     } else {

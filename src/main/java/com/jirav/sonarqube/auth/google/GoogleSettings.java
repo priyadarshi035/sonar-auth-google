@@ -34,8 +34,8 @@ import static org.sonar.api.PropertyType.SINGLE_SELECT_LIST;
 @ServerSide
 public class GoogleSettings {
 
-  public static final String CLIENT_ID = "sonar.auth.google.clientId";
-  public static final String CLIENT_SECRET = "sonar.auth.google.clientSecret";
+  public static final String CLIENT_ID = "sonar.auth.google.clientId.secured";
+  public static final String CLIENT_SECRET = "sonar.auth.google.clientSecret.secured";
   public static final String ENABLED = "sonar.auth.google.enabled";
   public static final String ALLOW_USERS_TO_SIGN_UP = "sonar.auth.google.allowUsersToSignUp";
 

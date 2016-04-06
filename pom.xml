@@ -2,12 +2,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>org.sonarsource.parent</groupId>
-    <artifactId>parent</artifactId>
-    <version>28</version>
-  </parent>
-
   <groupId>com.jirav.sonarqube.auth.google</groupId>
   <artifactId>sonar-auth-google-plugin</artifactId>
   <version>0.5-SNAPSHOT</version>
@@ -18,7 +12,6 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <sonar.pluginClass>com.jirav.sonarqube.auth.google.AuthGooglePlugin</sonar.pluginClass>
     <gitRepositoryName>sonar-auth-google</gitRepositoryName>
     <sonar.buildVersion>5.4</sonar.buildVersion>
     <jdk.min.version>1.7</jdk.min.version>
@@ -100,6 +93,7 @@
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
       <version>1.10.19</version>
+      <scope>test</scope>
       <exclusions>
         <exclusion>
           <groupId>org.hamcrest</groupId>
@@ -114,4 +108,18 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+	<groupId>org.sonarsource.sonar-packaging-maven-plugin</groupId>
+	<artifactId>sonar-packaging-maven-plugin</artifactId>
+	<version>1.15</version>
+	<extensions>true</extensions>
+	<configuration>
+	  <pluginClass>com.jirav.sonarqube.auth.google.AuthGooglePlugin</pluginClass>
+	</configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

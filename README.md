@@ -11,7 +11,7 @@ The directory `diffs` contains the file-by-file diffs between `sonar-auth-github
 
 ## What is different
 
-In terms of tecnhology stack, the main change is an updated version of [scribe-java](https://github.com/scribejava/scribejava), from 2.1.0 to 2.3.0.
+In terms of technology stack, the main change is an updated version of [scribe-java](https://github.com/scribejava/scribejava), from 2.1.0 to 2.3.0.
 
 In terms of functional differences, there are two changes:
 

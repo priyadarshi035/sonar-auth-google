@@ -4,7 +4,7 @@
 
   <groupId>com.jirav.sonarqube.auth.google</groupId>
   <artifactId>sonar-auth-google-plugin</artifactId>
-  <version>0.5</version>
+  <version>0.5-RC1</version>
   <packaging>sonar-plugin</packaging>
   <name>Google Authentication for SonarQube</name>
   <description>External authentication provider for Sonarqube using Google OAuth2 / OpenID Connect</description>

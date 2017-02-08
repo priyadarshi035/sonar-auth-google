@@ -2,17 +2,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.jirav.sonarqube.auth.google</groupId>
-  <artifactId>sonar-auth-google-plugin</artifactId>
+  <groupId>com.jirav.sonarqube.auth.ibm</groupId>
+  <artifactId>sonar-auth-ibm-plugin</artifactId>
   <version>0.6-SNAPSHOT</version>
   <packaging>sonar-plugin</packaging>
-  <name>Google Authentication for SonarQube</name>
-  <description>External authentication provider for Sonarqube using Google OAuth2 / OpenID Connect</description>
+  <name>IBM Authentication for SonarQube</name>
+  <description>External authentication provider for Sonarqube using IBM OAuth2 / OpenID Connect</description>
   <inceptionYear>2016</inceptionYear>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <gitRepositoryName>sonar-auth-google</gitRepositoryName>
+    <gitRepositoryName>sonar-auth-ibm</gitRepositoryName>
     <sonar.buildVersion>5.4</sonar.buildVersion>
     <jdk.min.version>1.7</jdk.min.version>
   </properties>
@@ -31,15 +31,15 @@
 
   <developers>
     <developer>
-      <id>steven-turner</id>
-      <name>Steven Turner</name>
-      <organization>Jirav</organization>
+      <id>Priyadarshi-Peter</id>
+      <name>Priyadarshi Peter</name>
+      <organization>IBM</organization>
     </developer>
   </developers>
 
   <organization>
-    <name>Jirav</name>
-    <url>https://www.jirav.com</url>
+    <name>IBM</name>
+    <url>https://w3.ibm.com</url>
   </organization>
 
   <dependencies>
@@ -55,7 +55,7 @@
       <version>2.3.0</version>
     </dependency>
     <dependency>
-      <groupId>com.google.code.gson</groupId>
+      <groupId>com.google.code.gson</groupId>       <!-------for IBM----->
       <artifactId>gson</artifactId>
       <version>2.3.1</version>
     </dependency>
@@ -71,7 +71,7 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.google.code.findbugs</groupId>
+      <groupId>com.google.code.findbugs</groupId>   <!-------for IBM----->
       <artifactId>jsr305</artifactId>
       <version>3.0.0</version>
       <scope>provided</scope>
@@ -117,7 +117,7 @@
 	<version>1.15</version>
 	<extensions>true</extensions>
 	<configuration>
-	  <pluginClass>com.jirav.sonarqube.auth.google.AuthGooglePlugin</pluginClass>
+	  <pluginClass>com.jirav.sonarqube.auth.ibm.AuthibmPlugin</pluginClass>
 	</configuration>
       </plugin>
     </plugins>
